@@ -1,0 +1,101 @@
+package Unit4;
+//数组静态初始化
+public class c4_5_3_1 {
+	public static void main(String[] args) {
+		String[] book=new String[] {"element1","element2"};
+		/*
+		 * String[] book;
+		 * book=new String[] {"element1","element2"};
+		 */
+		Object[] objArr;//object类
+		objArr=new Object[] {"java","李刚"};
+		int[] a= {8,9};//定义数组的方式
+	}
+}
+
+
+
+package Unit4;
+//continue只是忽略本次循环的剩下语句，接着开始下一次循环
+public class c4_2_2_1 {
+	public static void main(String[] args) {
+		for(int i=0;i<3;i++) {
+			System.out.println(i);
+			if(i==1) {
+				continue;
+			}
+			System.out.println("continue后输出的语句");
+		}
+	}
+}
+
+
+package Unit4;
+//数组的动态初始化
+public class c4_5_3_2 {
+	public static void main(String[] args) {
+		int[] a;
+		a=new int[5];
+		for(int i=0;i<a.length;i++) {
+			a[i]=16*i;
+			System.out.println(a[i]);
+		}
+	}
+}
+
+
+
+package Unit4;
+//foreach循环
+public class c4_5_5_1 {
+	public static void main(String[] args) {
+		int[] a={5,9,6,4,8};
+		/*
+		 * for(int i=0;i<a.length;i++) {
+		 * 	a[i]=16*i;
+		 * 	System.out.println(a[i]);
+		 * }
+		 */
+		for(int x : a) {//for(元素类型t 元素变量x : 遍历对象obj){
+			System.out.println(x);
+		}
+	}
+}
+
+
+
+package Unit4;
+//数组长度改变的假象
+public class c4_6_1_1 {
+	public static void main(String[] args) {
+		int[] a= {3,5,7};
+		int[] b=new int[4];
+		System.out.println("a数组长度 "+a.length);
+		for(int i=0;i<a.length;i++) {
+			System.out.println(a[i]);
+		}
+		System.out.println("b数组长度 "+b.length);
+		for(int j=0;j<b.length;j++) {
+			System.out.println(b[j]);
+		}
+		b=a;
+		System.out.println("更改后b的长度 "+b.length);
+	}
+}
+
+
+
+package Unit4;
+
+//二维数组
+public class c4_6_4_1 {
+    public static void main(String[] args) {
+        String[][] str = new String[][]{new String[3], new String[]{"hello"}};
+//        for (int i=0;i<3;i++){
+//            for (int j=0;j<3;j++){i
+                System.out.println(str[1][0]);
+//            }
+        }
+
+//    }
+}
