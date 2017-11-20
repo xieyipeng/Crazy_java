@@ -1,0 +1,252 @@
+package Unit3;
+
+public class c3_4_1_1 {
+	public static void main(String[] args) {
+		byte a=56;
+		/*系统将56当为byte类型处理
+		 * 系统不会将99999999999当作long类型处理
+		 * long bigValue=99999999999;
+		 * 下面是正确的，加‘L’，强制转化为long型
+		 */
+		long bigValue=9999999999L;
+		System.out.println(a);
+		System.out.println(bigValue);
+	}
+}
+
+
+
+package Unit3;
+/*
+ * 二进制以‘0B’‘0b’开头;32位二进制整数，最高位是符号位，1则为负数
+ * 八进制以‘0’开头;
+ * 十六进制以‘0x’‘0X’开头;
+ */
+public class c3_4_1_2 {
+	public static void main(String[] args) {
+		
+		int binValue=0b1110011;//二进制
+		int binValue1=0B10000000000000000000000000000011;
+		long binValue2=0B10000000000000000000000000000011L;
+		int octalValue=013;//八进制
+		int hexValue1=0x13;//十六进制
+		int hexValue2=0Xaf;//十六进制
+		System.out.println("binValue1  "+binValue1);
+		System.out.println("binValue2  "+binValue2);
+		System.out.println("binValue  "+binValue);
+		System.out.println("octalValue  "+octalValue);
+		System.out.println(hexValue1);
+		System.out.println(hexValue2);
+		System.out.println("******");
+		int a=hexValue2*2;
+		System.out.println(a);
+		/*
+		 * 所有数字在计算机中都是以二进制形式存在于计算机底层，将数值直接转换为的二进制数叫原码，
+		 * 但是计算机以补码形式存储所有整数    正数的补码与原码完全相同，
+		 * 							负数的补码是其反码加1;
+		 * 
+		 * 反码是对原码取反，最高位保持不变
+		 */
+		
+	}
+}
+
+
+package Unit3;
+
+public class c3_4_2_1 {
+	public static void main(String[] args) {
+		char achar='a';
+		char enterchar='\r';//回车键
+		char ch='\u9999';//Unicode编码值
+		System.out.println(achar);
+		System.out.print(enterchar);
+		System.out.println(ch);
+		System.out.println("*********");
+		char ch1='风';
+		int fengValue=ch1;
+		System.out.println(fengValue);
+		char c=97;
+		System.out.println(c);
+	}
+
+}
+
+
+
+
+package Unit3;
+
+public class c3_4_3_1 {
+	public static void main(String[] args) {
+		float af=5.23268845744f;
+		System.out.println(af);//发生变化
+		double a=0.0;
+		double c=Double.NEGATIVE_INFINITY;//负无穷大
+		float d=Float.NEGATIVE_INFINITY;//负无穷大
+		System.out.println(c == d);//true
+		System.out.println(a/a);//NaN
+		System.out.println(a/a==Float.NaN);//两个非数字之间不想等
+		/*
+		 它们用来标示溢出和出错。例如，用0除一个正数的结果是正无穷大而0/0或者对一个负数求开方则产生NaN
+		 不可以这样使用：
+		 if(x==Float.NaN)
+		 要这样使用：
+		 if(Float.isNaN(x)) 
+		 */
+		System.out.println(6.0/0==555.0/0);//所有正数无穷大都为零
+		System.out.println(-8/a);
+	}
+}
+
+
+package Unit3;
+
+public class c3_4_4_1 {
+	public static void main (String[] args) {
+		double PI=3.14_15_92_66;//用下划线分割
+		System.out.println(PI);
+		boolean b1=true;
+		boolean b2=false;
+		String str=true+" 123";//与字符串链接自动转化为字符串
+		System.out.println(str);
+	}
+}
+
+
+
+package Unit3;
+//自动类型转换
+public class c3_5_1_1 {
+	public static void main(String[] args) {
+		int a=6;
+		double d=a;
+		System.out.println(d);//6.0
+		String str=3.5f+" 123";//与字符串链接自动转化为字符串
+		System.out.println(str);
+	}
+}
+
+
+package Unit3;
+//强制类型转换
+public class c3_5_2_1 {
+	public static void main(String[] args) {
+		int a=123;
+		byte b=(byte)a;
+		System.out.println(b);
+		//
+		//short s=b;
+		//int d=s;
+		//char c=(char)s;
+		char c=(char)b;
+		System.out.println("*******");
+		System.out.println(c);//byte类型不能转化成char;
+		int by=0B11101001;
+		System.out.println(by);
+		System.out.println("*******");
+		byte byt=(byte)by;
+		System.out.println(byt);
+	}
+}
+
+
+
+package Unit3;
+//random   随机生成字符串
+public class c3_5_2_2 {
+	public static void main(String[] args) {
+		String str=" ";
+		for(int i=0;i<6;i++) {
+			int a=(int)(Math.random()*26+97);
+			str=str+(char)a;
+		}
+		System.out.println(str);
+		/*
+		int a=(int)(Math.random()*16);
+		System.out.println(a);
+		*/
+		float f1=5.6f;
+		float f2=(float)5.6;
+		System.out.println(f1==f2);//true
+		
+		String a="45";
+		int b=Integer.parseInt(a);//将字符串类型转换为int
+		System.out.println(a);
+		System.out.println("********");
+		System.out.println(b);
+	}
+}
+
+
+
+package Unit3;
+
+public class c3_5_3_1 {
+	public static void main(String[] args) {
+		short st=5;		   //将5自动上升为int型
+		//st=st+5;         //将int类型的值赋给short类型
+		System.out.println("hello!"+'a'+7);
+		System.out.println('a'+7+"hello!");//a先变成对应的ASCII值再相加
+	}
+}
+
+package Unit3;
+//字符串池
+public class c3_6_2_1 {
+	public static void main(String[] args) {
+		String a1="hello";
+		String a2="hello";
+		String a3="he"+"llo";
+		System.out.println(a1==a2);
+		System.out.println(a1==a3);
+	}
+}
+
+
+package Unit3;
+//++i与i++
+public class c3_7_1_1 {
+	public static void main(String[] args) {
+		int a=5;
+		int b=a++ +1;
+		System.out.println(b);//输出6
+		int c=7;
+		int d=++c +1;
+		System.out.println(d);//输出9
+	}
+}
+
+
+
+package Unit3;
+
+public class c3_7_1_2 {
+	public static void main(String[] args) {
+		double a=3.2;
+		double b=Math.pow(a, 5);//求a的5次方
+		System.out.println(b);
+		double c=Math.sqrt(a);//开方
+		System.out.println(c);
+		double d=Math.random();
+		System.out.println(d);//生成0-1之间的伪随机数
+		double e=Math.sin(1.5);
+		System.out.println(e);//求sin值
+	}
+}
+
+
+
+package Unit3;
+//位运算符，补码反码原码的运算
+public class c3_7_3_1 {
+	public static void main(String[] arge) {
+		System.out.println(5&9);//以二进制运算
+		System.out.println(5|9);//以二进制运算
+		System.out.println(~-5);
+		System.out.println(5^9);
+		System.out.println(-5<<2);//左移n位相等于乘以2的n次方
+		System.out.println(-5>>2);//右移n位相等于除以2的n次方
+		System.out.println(-5>>>2);
+	}
+}
