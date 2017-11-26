@@ -15,4 +15,7 @@
   ystem.out.println()
 
   st：
-  String
+  String
+* alt+insert
+
+\!\[picture](https://static.oschina.net/uploads/space/2017/0706/001108_uclK_2248183.png)
