@@ -1,13 +1,18 @@
 # **Java notes**
 ## 代码补全
-* **ctrl+j**
+* ctrl+j
 
-  fori       for(int i = 0;i < ;i++){}
+  fori：
+  for(int i = 0;i < ;i++){}
+  
+  foreach：
+  for(:){}
 
-  foreach    for(:){}
+  ifn：
+  if(args == null)
 
-  ifn        if(args == null)
+  sout：
+  ystem.out.println()
 
-  sout       System.out.println()
-
-  st         String
+  st：
+  String
