@@ -13,3 +13,5 @@
   String
 ### alt+insert
 ![picture](https://static.oschina.net/uploads/space/2017/0706/001108_uclK_2248183.png)
+### alt+Enter
+![picture](https://static.oschina.net/uploads/space/2017/0706/002215_3g7E_2248183.png)
