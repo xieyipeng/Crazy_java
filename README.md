@@ -17,5 +17,5 @@
   st：
   String
 * alt+insert
+![picture](https://static.oschina.net/uploads/space/2017/0706/001108_uclK_2248183.png){ImgCap}{/ImgCap}
 
-\!\[picture](https://static.oschina.net/uploads/space/2017/0706/001108_uclK_2248183.png)
