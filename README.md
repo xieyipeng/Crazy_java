@@ -1,25 +1,20 @@
 # **Java notes**
 ## 代码补全
-* ctrl+j
+### ctrl+j
 
-  fori：
+  fori：
   for(int i = 0;i < ;i++){}
   
-  foreach：
+  foreach：
   for(:){}
 
-  ifn：
+  ifn：
   if(args == null)
 
-  sout：
+  sout：
   ystem.out.println()
 
   st：
   String
-* alt+insert
-
-
-
-
+### alt+insert
 ![picture](https://static.oschina.net/uploads/space/2017/0706/001108_uclK_2248183.png)
-
