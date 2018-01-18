@@ -6,7 +6,7 @@ import java.util.Comparator;
 /**
  * lambda表达式调用Arrays的类方法
  */
-public class c_6_8_5_1 {
+public class c6_8_5_1 {
     public static void main(String[] args) {
         //1、
         String[] strings1 = new String[]{"java", "windows", "ios", "mac", "linux", "android"};

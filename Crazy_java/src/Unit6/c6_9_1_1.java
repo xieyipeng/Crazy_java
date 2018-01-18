@@ -13,7 +13,7 @@ enum SeasonEnum {
     SPRING, SUMMER, FALL, WINTER;
 }
 
-public class c_6_9_1 {
+public class c6_9_1_1 {
     public void judge(SeasonEnum seasonEnum) {
         switch (seasonEnum) {
             case SPRING:
@@ -38,6 +38,6 @@ public class c_6_9_1 {
         for (SeasonEnum seasonEnum : SeasonEnum.values()) {
             System.out.println(seasonEnum);
         }
-        new c_6_9_1().judge(SeasonEnum.SPRING);
+        new c6_9_1_1().judge(SeasonEnum.SPRING);
     }
 }
