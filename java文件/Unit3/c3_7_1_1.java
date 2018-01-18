@@ -1,0 +1,12 @@
+package Unit3;
+//++iÓëi++
+public class c3_7_1_1 {
+	public static void main(String[] args) {
+		int a=5;
+		int b=a++ +1;
+		System.out.println(b);//Êä³ö6
+		int c=7;
+		int d=++c +1;
+		System.out.println(d);//Êä³ö9
+	}
+}
