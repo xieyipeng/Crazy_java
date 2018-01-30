@@ -6,7 +6,7 @@ import java.util.HashSet;
 /**
  * lambda±Ì¥Ô Ω
  */
-public class c8_2_2 {
+public class c8_2_1 {
     public static void main(String[] args) {
         Collection books=new HashSet();
         books.add(1);
