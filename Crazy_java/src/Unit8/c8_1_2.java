@@ -7,7 +7,7 @@ import java.util.HashSet;
 /**
  * CollectionºÍIterator½Ó¿Ú
  */
-public class c8_2_1 {
+public class c8_1_2 {
     public static void main(String[] args) {
         Collection collection = new ArrayList();
         collection.add("ËïÎò¿Õ");
