@@ -21,7 +21,7 @@ public class c7_2_2 {
          * 内存总数126877696
          * 可用最大内存数1862270976
          */
-        Runtime runtime=Runtime.getRuntime();
+        Runtime runtime = Runtime.getRuntime();
         //启动记事本程序
         runtime.exec("notepad.exe");
     }

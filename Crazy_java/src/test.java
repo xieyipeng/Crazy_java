@@ -1,6 +1,7 @@
 public class test {
     public static void main(String[] args) {
-        String a=null;
-        System.out.println(a);
+        char a='A';
+        System.out.println(Integer.valueOf(a));
+        System.out.println((char)15);
     }
 }
