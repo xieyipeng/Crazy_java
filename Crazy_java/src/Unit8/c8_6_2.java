@@ -5,6 +5,8 @@ import java.util.Hashtable;
 /**
  * HashMap和HashTable实现类
  * 不能保存顺序
+ *    若是使用可变对象作为HashMap，HashTable的key，并且修改了作为key的可变对象
+ * 那么程序可能无法准确的访问Map中被修改过的key
  */
 class D{
     int count;
