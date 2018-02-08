@@ -25,7 +25,7 @@ public class c8_6_6 {
         //通知系统进行垃圾回收
         System.gc();
         System.runFinalization();
-        //通常情况下，将只看到一个keyvalue对
+        //通常情况下，将只看到一个key-value对
         System.out.println("last  " + weakHashMap);
     }
 }
