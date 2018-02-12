@@ -18,5 +18,5 @@ class Aplle<T extends Number>{
 
 //为程序类型形参设定多个上限
 
-public class c9_3_3 <T extends Number & java.io.Serializable{
+public class c9_3_3 <T extends Number & java.io.Serializable>{
 }
