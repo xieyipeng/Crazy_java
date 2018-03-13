@@ -1,10 +1,10 @@
 package Unit9;
 
 /**
- * ·ºÐÍÓëÊý×é
- * Èç¹ûÒ»¶Î´úÂëÔÚ±àÒëÊ±Ã»ÓÐÌá³öÎ´¾­¼ì²éµÄ×ª»»¾¯¸æ£¬
- * ÄÇÃ´³ÌÐòÔÚÔËÐÐÊ±¾Í²»»áÒý·¢ClassCastException
- * Òì³£
+ * æ³›åž‹ä¸Žæ•°ç»„
+ * å¦‚æžœä¸€æ®µä»£ç åœ¨ç¼–è¯‘æ—¶æ²¡æœ‰æå‡ºæœªç»æ£€æŸ¥çš„è½¬æ¢è­¦å‘Šï¼Œ
+ * é‚£ä¹ˆç¨‹åºåœ¨è¿è¡Œæ—¶å°±ä¸ä¼šå¼•å‘ClassCastException
+ * å¼‚å¸¸
  */
 public class c9_6 {
     public static void main(String[] args) {

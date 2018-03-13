@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ²Á³ıºÍ×ª»»
+ * æ“¦é™¤å’Œè½¬æ¢
  */
 class Apole<T extends Number> {
     T size;
@@ -27,23 +27,23 @@ class Apole<T extends Number> {
 
 public class c9_5 {
     public static void main(String[] args) {
-        System.out.println("****²Á³ı****");
+        System.out.println("****æ“¦é™¤****");
         Apole<Integer> integerApole1=new Apole<>(6);
         Integer integer=integerApole1.getSize();
-        //°ÑintegerApole1¶ÔÏó¸³¸ø²»´ø·ºĞÍĞÅÏ¢µÄintegerApole2Ê±£¬¶ªÊ§ÁË¼âÀ¨ºÅÀïµÄÀàĞÍĞÅÏ¢
+        //æŠŠintegerApole1å¯¹è±¡èµ‹ç»™ä¸å¸¦æ³›å‹ä¿¡æ¯çš„integerApole2æ—¶ï¼Œä¸¢å¤±äº†å°–æ‹¬å·é‡Œçš„ç±»å‹ä¿¡æ¯
         Apole integerApole2=integerApole1;
-        //integerApole2Ö»ÖªµÀsizeµÄÀàĞÍÊÇNumber
+        //integerApole2åªçŸ¥é“sizeçš„ç±»å‹æ˜¯Number
         Number size1=integerApole2.getSize();
-        //ÏÂÃæ´úÂë³ö´í
+        //ä¸‹é¢ä»£ç å‡ºé”™
         //Integer size2=integerApole2.getSize();
-        System.out.println("****×ª»»****");
+        System.out.println("****è½¬æ¢****");
         List<Integer> integerList=new ArrayList<>();
         integerList.add(6);
         integerList.add(9);
         List list=integerList;
-        //ÏÂÃæ´úÂëÒıÆğ¾¯¸æ£¬µ«ÊÇÔËĞĞ±àÒëÊ±ÍêÈ«Õı³£
+        //ä¸‹é¢ä»£ç å¼•èµ·è­¦å‘Šï¼Œä½†æ˜¯è¿è¡Œç¼–è¯‘æ—¶å®Œå…¨æ­£å¸¸
         List<String> stringList=list;
-        //µ«Ö»Òª·ÃÎÊÀïÃæµÄÔªËØ£¬½«ÒıÆğÔËĞĞÊ±Òì³£
+        //ä½†åªè¦è®¿é—®é‡Œé¢çš„å…ƒç´ ï¼Œå°†å¼•èµ·è¿è¡Œæ—¶å¼‚å¸¸
         System.out.println(stringList.get(0));
     }
 }
