@@ -1,13 +1,13 @@
-package Unit11;
+package unit11;
 
 import java.awt.*;
 
 public class FrameTest {
     public static void main(String[] args) {
-        Frame frame = new Frame("æµ‹è¯•çª—å£");
-        //è®¾ç½®çª—å£å¤§å°ï¼Œä½ç½®ï¼›
+        Frame frame = new Frame("²âÊÔ´°¿Ú");
+        //ÉèÖÃ´°¿Ú´óĞ¡£¬Î»ÖÃ£»
         frame.setBounds(30,30,250,200);
-        //å°†çª—å£æ˜¾ç¤ºå‡ºæ¥
+        //½«´°¿ÚÏÔÊ¾³öÀ´
         frame.setVisible(true);
     }
 }
