@@ -1,13 +1,11 @@
 package Unit8;
 
-import sun.reflect.generics.tree.Tree;
-
 import java.util.TreeMap;
 
 /**
- * SortedMap½Ó¿ÚºÍTreeMapÊµÏÖÀà
- * ºÍSetÒ»Ñù£¬Map½Ó¿ÚÅÉÉú³öÒ»¸öSortedMap½Ó¿Ú£¬SortedMap½Ó¿ÚÒ²ÓÐÒ»¸öTreeMapÊµÏÖÀà
- * TreeMap¾ÍÊÇÒ»¸öºìºÚÊ÷Êý¾Ý½á¹¹
+ * SortedMapï¿½Ó¿Úºï¿½TreeMapÊµï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½SetÒ»ï¿½ï¿½ï¿½ï¿½Mapï¿½Ó¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½SortedMapï¿½Ó¿Ú£ï¿½SortedMapï¿½Ó¿ï¿½Ò²ï¿½ï¿½Ò»ï¿½ï¿½TreeMapÊµï¿½ï¿½ï¿½ï¿½
+ * TreeMapï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý½á¹¹
  */
 
 class F implements Comparable{
@@ -41,19 +39,19 @@ class F implements Comparable{
 public class c8_6_5 {
     public static void main(String[] args) {
         TreeMap treeMap=new TreeMap();
-        treeMap.put(new F(3),"ÇáÁ¿¼¶java EEÆóÒµ Ó¦ÓÃÊµ¼ù");
-        treeMap.put(new F(-5),"·è¿ñjava½²Òå");
-        treeMap.put(new F(9),"·è¿ñAndroid½²Òå");
+        treeMap.put(new F(3),"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½java EEï¿½ï¿½Òµ Ó¦ï¿½ï¿½Êµï¿½ï¿½");
+        treeMap.put(new F(-5),"ï¿½ï¿½ï¿½javaï¿½ï¿½ï¿½ï¿½");
+        treeMap.put(new F(9),"ï¿½ï¿½ï¿½Androidï¿½ï¿½ï¿½ï¿½");
         System.out.println(treeMap);
-        //·µ»ØµÚÒ»¸ö¶ÔÏóµÄEntry
+        //ï¿½ï¿½ï¿½Øµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Entry
         System.out.println(treeMap.firstEntry());
-        //·µ»ØµÚÒ»¸ö¶ÔÏóµÄkey
+        //ï¿½ï¿½ï¿½Øµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½key
         System.out.println(treeMap.firstKey());
-        //·µ»Ø¸ÄtreeMapµÄ±Ènew(2)´óµÄ×îÐ¡keyÖµ
+        //ï¿½ï¿½ï¿½Ø¸ï¿½treeMapï¿½Ä±ï¿½new(2)ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡keyÖµ
         System.out.println(treeMap.higherKey(new F(2)));
-        //·µ»Ø¸ÄtreeMapµÄ±Ènew(2)Ð¡µÄ×î´óµÄkey-value¶Ô
+        //ï¿½ï¿½ï¿½Ø¸ï¿½treeMapï¿½Ä±ï¿½new(2)Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½key-valueï¿½ï¿½
         System.out.println(treeMap.lowerEntry(new F(2)));
-        //·µ»Ø¸ÃTreeMapµÄ×ÓTreeMap
+        //ï¿½ï¿½ï¿½Ø¸ï¿½TreeMapï¿½ï¿½ï¿½ï¿½TreeMap
         System.out.println(treeMap.subMap(new F(-1),new F(4)));
     }
 }
