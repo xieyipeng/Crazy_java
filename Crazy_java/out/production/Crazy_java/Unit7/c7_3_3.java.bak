@@ -2,29 +2,29 @@ package Unit7;
 
 /**
  * String
- *      ä¸å¯å˜ç±»
+ *      ²»¿É±äÀà
  * StringBuffer
- *      å¯å˜ï¼Œå˜æˆè‡ªå·±æƒ³è¦çš„ä¹‹åå¯è°ƒç”¨ toString() è½¬æ¢æˆ String
+ *      ¿É±ä£¬±ä³É×Ô¼ºÏëÒªµÄÖ®ºó¿Éµ÷ÓÃ toString() ×ª»»³É String
  * StringBuilder
- *      å’Œ StringBuffer åŸºæœ¬ç›¸ä¼¼ï¼Œå¤šè€ƒè™‘äº†çº¿ç¨‹å®‰å…¨
+ *      ºÍ StringBuffer »ù±¾ÏàËÆ£¬¶à¿¼ÂÇÁËÏß³Ì°²È«
  */
 public class c7_3_3 {
     public static void main(String[] args) {
         StringBuilder stringBuilder=new StringBuilder();
-        //è¿½åŠ å­—ç¬¦ä¸²
+        //×·¼Ó×Ö·û´®
         stringBuilder.append("java");
         System.out.println(stringBuilder);
-        //æ’å…¥
+        //²åÈë
         stringBuilder.insert(0,"hello ");
         System.out.println(stringBuilder);
-        //æ›¿æ¢
+        //Ìæ»»
         stringBuilder.replace(5,6,",");
         System.out.println(stringBuilder);
-        //åè½¬
+        //·´×ª
         stringBuilder.reverse();
         System.out.println(stringBuilder);
         System.out.println(stringBuilder.length());
-        System.out.println(stringBuilder.capacity());   //æœ€å¤§é™åº¦
+        System.out.println(stringBuilder.capacity());   //×î´óÏŞ¶È
         stringBuilder.setLength(5);
         System.out.println(stringBuilder);
     }

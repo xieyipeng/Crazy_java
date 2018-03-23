@@ -1,5 +1,5 @@
 package Unit4;
-//Êı×é¾²Ì¬³õÊ¼»¯
+//æ•°ç»„é™æ€åˆå§‹åŒ–
 public class c4_5_3_1 {
 	public static void main(String[] args) {
 		String[] book=new String[] {"element1","element2"};
@@ -7,8 +7,8 @@ public class c4_5_3_1 {
 		 * String[] book;
 		 * book=new String[] {"element1","element2"};
 		 */
-		Object[] objArr;//objectÀà
-		objArr=new Object[] {"java","Àî¸Õ"};
-		int[] a= {8,9};//¶¨ÒåÊı×éµÄ·½Ê½
+		Object[] objArr;//objectç±»
+		objArr=new Object[] {"java","æåˆš"};
+		int[] a= {8,9};//å®šä¹‰æ•°ç»„çš„æ–¹å¼
 	}
 }

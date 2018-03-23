@@ -2,49 +2,49 @@ package Unit4;
 
 import java.util.Scanner;
 
-//ÊµÏÖ´ÓÒÚ(9Î»)µ½ÁãµÄÕûÊıÏòºº×Ö×ª»»
+//å®ç°ä»äº¿(9ä½)åˆ°é›¶çš„æ•´æ•°å‘æ±‰å­—è½¬æ¢
 public class NumberToChinese {
     private final int MAXSIZE = 9;
-    private String[] hanArr = {"Áã", "Ò¼", "·¡", "Èş", "ËÁ", "Îé", "Â½", "Æâ", "°Æ", "¾Á"};
-    private String[] unitArr = {"Ê®", "°Ù", "Ç§", "Íò", "Ê®Íò", "°ÙÍò", "Ç§", "ÒÚ"};
-    private String[] unitArr1 = {"Ê®", "°Ù", "Ç§", "Íò", "Ê®", "°Ù", "Ç§Íò", "ÒÚ"};
+    private String[] hanArr = {"é›¶", "å£¹", "è´°", "å", "è‚†", "ä¼", "é™†", "æŸ’", "æŒ", "ç–"};
+    private String[] unitArr = {"å", "ç™¾", "åƒ", "ä¸‡", "åä¸‡", "ç™¾ä¸‡", "åƒ", "äº¿"};
+    private String[] unitArr1 = {"å", "ç™¾", "åƒ", "ä¸‡", "å", "ç™¾", "åƒä¸‡", "äº¿"};
 
     /**
-     * ÅĞ¶ÏnumÊÇ¼¸Î»Êı
+     * åˆ¤æ–­numæ˜¯å‡ ä½æ•°
      *
-     * @param num ÅĞ¶ÏnumÊÇ¼¸Î»Êı
-     * @return ·µ»ØÊÇiÎ»Êı
+     * @param num åˆ¤æ–­numæ˜¯å‡ ä½æ•°
+     * @return è¿”å›æ˜¯iä½æ•°
      */
     private int geti(int num) {
         int i = 0;
         if (num != 0) {
             while (num > 0) {
                 num = num / 10;
-                i++;//numÊÇiÎ»Êı
+                i++;//numæ˜¯iä½æ•°
             }
         }
         return i;
     }
 
     /**
-     * È¡µÃ×Ö·û´®strµÄµÚiÎ»Êı×Ö
+     * å–å¾—å­—ç¬¦ä¸²strçš„ç¬¬iä½æ•°å­—
      *
-     * @param str È¡µÃ×Ö·û´®strµÄµÚiÎ»Êı×Ö
-     * @param i   È¡µÃ×Ö·û´®strµÄµÚiÎ»Êı×Ö
-     * @return ·µ»ØµÚiÎ»Êı×Ö
-     * staticĞŞÊÎµÄ·½·¨²»ÄÜµ÷ÓÃÃ»ÓĞstaticĞŞÊÎµÄ·½·¨
-     * staticÖĞ²»ÄÜÓĞthis
+     * @param str å–å¾—å­—ç¬¦ä¸²strçš„ç¬¬iä½æ•°å­—
+     * @param i   å–å¾—å­—ç¬¦ä¸²strçš„ç¬¬iä½æ•°å­—
+     * @return è¿”å›ç¬¬iä½æ•°å­—
+     * staticä¿®é¥°çš„æ–¹æ³•ä¸èƒ½è°ƒç”¨æ²¡æœ‰staticä¿®é¥°çš„æ–¹æ³•
+     * staticä¸­ä¸èƒ½æœ‰this
      */
-    private static int getNum(String str, int i) {//charAt()º¯ÊıÔªËØ±êºÅÏà·´
-        int num = str.charAt(i) - 48;//ASCIIÖµ²î48
+    private static int getNum(String str, int i) {//charAt()å‡½æ•°å…ƒç´ æ ‡å·ç›¸å
+        int num = str.charAt(i) - 48;//ASCIIå€¼å·®48
         return num;
     }
 
     /**
-     * Êı×Ö×ª»»Îªºº×Ö
+     * æ•°å­—è½¬æ¢ä¸ºæ±‰å­—
      *
-     * @param str ´«½øÀ´µÄÊı×Ö×Ö·û´®
-     * @return ×ª»»ºÃµÄºº×Ö
+     * @param str ä¼ è¿›æ¥çš„æ•°å­—å­—ç¬¦ä¸²
+     * @return è½¬æ¢å¥½çš„æ±‰å­—
      */
     private String NuToCh(String str) {
         String result = "";
@@ -96,17 +96,17 @@ public class NumberToChinese {
                                 result = result + hanArr[d[j]];
                             }
                         }
-                        //É¾³ıÖĞ¼ä¶àÓàµÄÁã
-                        StringBuffer buffer = new StringBuffer(result);//string ×ª»¯Îª StringBuffer
+                        //åˆ é™¤ä¸­é—´å¤šä½™çš„é›¶
+                        StringBuffer buffer = new StringBuffer(result);//string è½¬åŒ–ä¸º StringBuffer
                         for (int j = 0; j < buffer.length() - 1; j++) {
-                            if (buffer.charAt(j) == 'Áã' && buffer.charAt(j + 1) == 'Áã') {
+                            if (buffer.charAt(j) == 'é›¶' && buffer.charAt(j + 1) == 'é›¶') {
                                 buffer.deleteCharAt(j);
-                                //Ã¿´ÎÉ¾³ıÒ»¸öÁãºó£¬ºóÃæµÄÔªËØÏòÇ°ÒÆ¶¯Ò»Î»±ÈÈç¡° Ò»Ç§ Áã ÁãÁã ¡±É¾³ıÒ»Î»£¬¶øforÖĞj++
+                                //æ¯æ¬¡åˆ é™¤ä¸€ä¸ªé›¶åï¼Œåé¢çš„å…ƒç´ å‘å‰ç§»åŠ¨ä¸€ä½æ¯”å¦‚â€œ ä¸€åƒ é›¶ é›¶é›¶ â€åˆ é™¤ä¸€ä½ï¼Œè€Œforä¸­j++
                                 j--;
                             }
                         }
-                        //É¾³ıÄ©Î²¶àÓàµÄÁã
-                        while (buffer.charAt(buffer.length() - 1) == 'Áã') {
+                        //åˆ é™¤æœ«å°¾å¤šä½™çš„é›¶
+                        while (buffer.charAt(buffer.length() - 1) == 'é›¶') {
                             buffer.deleteCharAt(buffer.length() - 1);
                         }
                         result = buffer.toString();
@@ -123,16 +123,16 @@ public class NumberToChinese {
                                 result = result + hanArr[e[j]];
                             }
                         }
-                        StringBuffer buffer1 = new StringBuffer(result);//string ×ª»¯Îª StringBuffer
+                        StringBuffer buffer1 = new StringBuffer(result);//string è½¬åŒ–ä¸º StringBuffer
                         for (int j = 0; j < buffer1.length() - 1; j++) {
-                            if (buffer1.charAt(j) == 'Áã' && buffer1.charAt(j + 1) == 'Áã') {
+                            if (buffer1.charAt(j) == 'é›¶' && buffer1.charAt(j + 1) == 'é›¶') {
                                 buffer1.deleteCharAt(j);
-                                //Ã¿´ÎÉ¾³ıÒ»¸öÁãºó£¬ºóÃæµÄÔªËØÏòÇ°ÒÆ¶¯Ò»Î»±ÈÈç¡° Ò»Ç§ Áã ÁãÁã ¡±É¾³ıÒ»Î»£¬¶øforÖĞj++
+                                //æ¯æ¬¡åˆ é™¤ä¸€ä¸ªé›¶åï¼Œåé¢çš„å…ƒç´ å‘å‰ç§»åŠ¨ä¸€ä½æ¯”å¦‚â€œ ä¸€åƒ é›¶ é›¶é›¶ â€åˆ é™¤ä¸€ä½ï¼Œè€Œforä¸­j++
                                 j--;
                             }
                         }
-                        //É¾³ıÄ©Î²¶àÓàµÄÁã
-                        while (buffer1.charAt(buffer1.length() - 1) == 'Áã') {
+                        //åˆ é™¤æœ«å°¾å¤šä½™çš„é›¶
+                        while (buffer1.charAt(buffer1.length() - 1) == 'é›¶') {
                             buffer1.deleteCharAt(buffer1.length() - 1);
                         }
                         result = buffer1.toString();
@@ -151,39 +151,39 @@ public class NumberToChinese {
                                 result = result + hanArr[f[j]];
                             }
                         }
-                        StringBuffer buffer2 = new StringBuffer(result);//string ×ª»¯Îª StringBuffer
+                        StringBuffer buffer2 = new StringBuffer(result);//string è½¬åŒ–ä¸º StringBuffer
                         for (int j = 0; j < buffer2.length() - 1; j++) {
-                            if (buffer2.charAt(j) == 'Áã' && buffer2.charAt(j + 1) == 'Áã') {
+                            if (buffer2.charAt(j) == 'é›¶' && buffer2.charAt(j + 1) == 'é›¶') {
                                 buffer2.deleteCharAt(j);
-                                //Ã¿´ÎÉ¾³ıÒ»¸öÁãºó£¬ºóÃæµÄÔªËØÏòÇ°ÒÆ¶¯Ò»Î»±ÈÈç¡° Ò»Ç§ Áã ÁãÁã ¡±É¾³ıÒ»Î»£¬¶øforÖĞj++
+                                //æ¯æ¬¡åˆ é™¤ä¸€ä¸ªé›¶åï¼Œåé¢çš„å…ƒç´ å‘å‰ç§»åŠ¨ä¸€ä½æ¯”å¦‚â€œ ä¸€åƒ é›¶ é›¶é›¶ â€åˆ é™¤ä¸€ä½ï¼Œè€Œforä¸­j++
                                 j--;
                             }
                         }
-                        //É¾³ı¡° Ò¼Ê®ÁãÍòÁãÇ§Áã°ÙÁãÊ®Ò¼ ¡±ÖĞµÄÁã
+                        //åˆ é™¤â€œ å£¹åé›¶ä¸‡é›¶åƒé›¶ç™¾é›¶åå£¹ â€ä¸­çš„é›¶
                         for (int j = 0; j < buffer2.length() - 1; j++) {
-                            if (buffer2.charAt(j) == 'Áã' && buffer2.charAt(j + 1) == 'Ê®') {
+                            if (buffer2.charAt(j) == 'é›¶' && buffer2.charAt(j + 1) == 'å') {
                                 buffer2.deleteCharAt(j + 1);
                             }
                         }
                         for (int j = 0; j < buffer2.length() - 1; j++) {
-                            if (buffer2.charAt(j) == 'Áã' && buffer2.charAt(j + 1) == '°Ù') {
+                            if (buffer2.charAt(j) == 'é›¶' && buffer2.charAt(j + 1) == 'ç™¾') {
                                 buffer2.deleteCharAt(j);
                                 buffer2.deleteCharAt(j);
                             }
                         }
                         for (int j = 0; j < buffer2.length() - 1; j++) {
-                            if (buffer2.charAt(j) == 'Áã' && buffer2.charAt(j + 1) == 'Ç§') {
+                            if (buffer2.charAt(j) == 'é›¶' && buffer2.charAt(j + 1) == 'åƒ') {
                                 buffer2.deleteCharAt(j);
                                 buffer2.deleteCharAt(j);
                             }
                         }
                         for (int j = 0; j < buffer2.length() - 1; j++) {
-                            if (buffer2.charAt(j) == 'Áã' && buffer2.charAt(j + 1) == 'Íò') {
+                            if (buffer2.charAt(j) == 'é›¶' && buffer2.charAt(j + 1) == 'ä¸‡') {
                                 buffer2.deleteCharAt(j);
                             }
                         }
-                        //É¾³ıÄ©Î²¶àÓàµÄÁã
-                        while (buffer2.charAt(buffer2.length() - 1) == 'Áã') {
+                        //åˆ é™¤æœ«å°¾å¤šä½™çš„é›¶
+                        while (buffer2.charAt(buffer2.length() - 1) == 'é›¶') {
                             buffer2.deleteCharAt(buffer2.length() - 1);
                         }
                         result = buffer2.toString();
@@ -200,39 +200,39 @@ public class NumberToChinese {
                                 result = result + hanArr[g[j]];
                             }
                         }
-                        StringBuffer buffer3 = new StringBuffer(result);//string ×ª»¯Îª StringBuffer
+                        StringBuffer buffer3 = new StringBuffer(result);//string è½¬åŒ–ä¸º StringBuffer
                         for (int j = 0; j < buffer3.length() - 1; j++) {
-                            if (buffer3.charAt(j) == 'Áã' && buffer3.charAt(j + 1) == 'Áã') {
+                            if (buffer3.charAt(j) == 'é›¶' && buffer3.charAt(j + 1) == 'é›¶') {
                                 buffer3.deleteCharAt(j);
-                                //Ã¿´ÎÉ¾³ıÒ»¸öÁãºó£¬ºóÃæµÄÔªËØÏòÇ°ÒÆ¶¯Ò»Î»±ÈÈç¡° Ò»Ç§ Áã ÁãÁã ¡±É¾³ıÒ»Î»£¬¶øforÖĞj++
+                                //æ¯æ¬¡åˆ é™¤ä¸€ä¸ªé›¶åï¼Œåé¢çš„å…ƒç´ å‘å‰ç§»åŠ¨ä¸€ä½æ¯”å¦‚â€œ ä¸€åƒ é›¶ é›¶é›¶ â€åˆ é™¤ä¸€ä½ï¼Œè€Œforä¸­j++
                                 j--;
                             }
                         }
-                        //É¾³ı¡° Ò¼Ê®ÁãÍòÁãÇ§Áã°ÙÁãÊ®Ò¼ ¡±ÖĞµÄÁã
+                        //åˆ é™¤â€œ å£¹åé›¶ä¸‡é›¶åƒé›¶ç™¾é›¶åå£¹ â€ä¸­çš„é›¶
                         for (int j = 0; j < buffer3.length() - 1; j++) {
-                            if (buffer3.charAt(j) == 'Áã' && buffer3.charAt(j + 1) == 'Ê®') {
+                            if (buffer3.charAt(j) == 'é›¶' && buffer3.charAt(j + 1) == 'å') {
                                 buffer3.deleteCharAt(j + 1);
                             }
                         }
                         for (int j = 0; j < buffer3.length() - 1; j++) {
-                            if (buffer3.charAt(j) == 'Áã' && buffer3.charAt(j + 1) == '°Ù') {
+                            if (buffer3.charAt(j) == 'é›¶' && buffer3.charAt(j + 1) == 'ç™¾') {
                                 buffer3.deleteCharAt(j);
                                 buffer3.deleteCharAt(j);
                             }
                         }
                         for (int j = 0; j < buffer3.length() - 1; j++) {
-                            if (buffer3.charAt(j) == 'Áã' && buffer3.charAt(j + 1) == 'Ç§') {
+                            if (buffer3.charAt(j) == 'é›¶' && buffer3.charAt(j + 1) == 'åƒ') {
                                 buffer3.deleteCharAt(j);
                                 buffer3.deleteCharAt(j);
                             }
                         }
                         for (int j = 0; j < buffer3.length() - 1; j++) {
-                            if (buffer3.charAt(j) == 'Áã' && buffer3.charAt(j + 1) == 'Íò') {
+                            if (buffer3.charAt(j) == 'é›¶' && buffer3.charAt(j + 1) == 'ä¸‡') {
                                 buffer3.deleteCharAt(j);
                             }
                         }
-                        //É¾³ıÄ©Î²¶àÓàµÄÁã
-                        while (buffer3.charAt(buffer3.length() - 1) == 'Áã') {
+                        //åˆ é™¤æœ«å°¾å¤šä½™çš„é›¶
+                        while (buffer3.charAt(buffer3.length() - 1) == 'é›¶') {
                             buffer3.deleteCharAt(buffer3.length() - 1);
                         }
                         result = buffer3.toString();
@@ -249,39 +249,39 @@ public class NumberToChinese {
                                 result = result + hanArr[h[j]];
                             }
                         }
-                        StringBuffer buffer4 = new StringBuffer(result);//string ×ª»¯Îª StringBuffer
+                        StringBuffer buffer4 = new StringBuffer(result);//string è½¬åŒ–ä¸º StringBuffer
                         for (int j = 0; j < buffer4.length() - 1; j++) {
-                            if (buffer4.charAt(j) == 'Áã' && buffer4.charAt(j + 1) == 'Áã') {
+                            if (buffer4.charAt(j) == 'é›¶' && buffer4.charAt(j + 1) == 'é›¶') {
                                 buffer4.deleteCharAt(j);
-                                //Ã¿´ÎÉ¾³ıÒ»¸öÁãºó£¬ºóÃæµÄÔªËØÏòÇ°ÒÆ¶¯Ò»Î»±ÈÈç¡° Ò»Ç§ Áã ÁãÁã ¡±É¾³ıÒ»Î»£¬¶øforÖĞj++
+                                //æ¯æ¬¡åˆ é™¤ä¸€ä¸ªé›¶åï¼Œåé¢çš„å…ƒç´ å‘å‰ç§»åŠ¨ä¸€ä½æ¯”å¦‚â€œ ä¸€åƒ é›¶ é›¶é›¶ â€åˆ é™¤ä¸€ä½ï¼Œè€Œforä¸­j++
                                 j--;
                             }
                         }
-                        //É¾³ı¡° Ò¼Ê®ÁãÍòÁãÇ§Áã°ÙÁãÊ®Ò¼ ¡±ÖĞµÄÁã
+                        //åˆ é™¤â€œ å£¹åé›¶ä¸‡é›¶åƒé›¶ç™¾é›¶åå£¹ â€ä¸­çš„é›¶
                         for (int j = 0; j < buffer4.length() - 1; j++) {
-                            if (buffer4.charAt(j) == 'Áã' && buffer4.charAt(j + 1) == 'Ê®') {
+                            if (buffer4.charAt(j) == 'é›¶' && buffer4.charAt(j + 1) == 'å') {
                                 buffer4.deleteCharAt(j + 1);
                             }
                         }
                         for (int j = 0; j < buffer4.length() - 1; j++) {
-                            if (buffer4.charAt(j) == 'Áã' && buffer4.charAt(j + 1) == '°Ù') {
+                            if (buffer4.charAt(j) == 'é›¶' && buffer4.charAt(j + 1) == 'ç™¾') {
                                 buffer4.deleteCharAt(j);
                                 buffer4.deleteCharAt(j);
                             }
                         }
                         for (int j = 0; j < buffer4.length() - 1; j++) {
-                            if (buffer4.charAt(j) == 'Áã' && buffer4.charAt(j + 1) == 'Ç§') {
+                            if (buffer4.charAt(j) == 'é›¶' && buffer4.charAt(j + 1) == 'åƒ') {
                                 buffer4.deleteCharAt(j);
                                 buffer4.deleteCharAt(j);
                             }
                         }
                         for (int j = 0; j < buffer4.length() - 1; j++) {
-                            if (buffer4.charAt(j) == 'Áã' && buffer4.charAt(j + 1) == 'Íò') {
+                            if (buffer4.charAt(j) == 'é›¶' && buffer4.charAt(j + 1) == 'ä¸‡') {
                                 buffer4.deleteCharAt(j);
                             }
                         }
-                        //É¾³ıÄ©Î²¶àÓàµÄÁã
-                        while (buffer4.charAt(buffer4.length() - 1) == 'Áã') {
+                        //åˆ é™¤æœ«å°¾å¤šä½™çš„é›¶
+                        while (buffer4.charAt(buffer4.length() - 1) == 'é›¶') {
                             buffer4.deleteCharAt(buffer4.length() - 1);
                         }
                         result = buffer4.toString();
@@ -298,39 +298,39 @@ public class NumberToChinese {
                                 result = result + hanArr[k[j]];
                             }
                         }
-                        StringBuffer buffer5 = new StringBuffer(result);//string ×ª»¯Îª StringBuffer
+                        StringBuffer buffer5 = new StringBuffer(result);//string è½¬åŒ–ä¸º StringBuffer
                         for (int j = 0; j < buffer5.length() - 1; j++) {
-                            if (buffer5.charAt(j) == 'Áã' && buffer5.charAt(j + 1) == 'Áã') {
+                            if (buffer5.charAt(j) == 'é›¶' && buffer5.charAt(j + 1) == 'é›¶') {
                                 buffer5.deleteCharAt(j);
-                                //Ã¿´ÎÉ¾³ıÒ»¸öÁãºó£¬ºóÃæµÄÔªËØÏòÇ°ÒÆ¶¯Ò»Î»±ÈÈç¡° Ò»Ç§ Áã ÁãÁã ¡±É¾³ıÒ»Î»£¬¶øforÖĞj++
+                                //æ¯æ¬¡åˆ é™¤ä¸€ä¸ªé›¶åï¼Œåé¢çš„å…ƒç´ å‘å‰ç§»åŠ¨ä¸€ä½æ¯”å¦‚â€œ ä¸€åƒ é›¶ é›¶é›¶ â€åˆ é™¤ä¸€ä½ï¼Œè€Œforä¸­j++
                                 j--;
                             }
                         }
-                        //É¾³ı¡° Ò¼Ê®ÁãÍòÁãÇ§Áã°ÙÁãÊ®Ò¼ ¡±ÖĞµÄÁã
+                        //åˆ é™¤â€œ å£¹åé›¶ä¸‡é›¶åƒé›¶ç™¾é›¶åå£¹ â€ä¸­çš„é›¶
                         for (int j = 0; j < buffer5.length() - 1; j++) {
-                            if (buffer5.charAt(j) == 'Áã' && buffer5.charAt(j + 1) == 'Ê®') {
+                            if (buffer5.charAt(j) == 'é›¶' && buffer5.charAt(j + 1) == 'å') {
                                 buffer5.deleteCharAt(j + 1);
                             }
                         }
                         for (int j = 0; j < buffer5.length() - 1; j++) {
-                            if (buffer5.charAt(j) == 'Áã' && buffer5.charAt(j + 1) == '°Ù') {
+                            if (buffer5.charAt(j) == 'é›¶' && buffer5.charAt(j + 1) == 'ç™¾') {
                                 buffer5.deleteCharAt(j);
                                 buffer5.deleteCharAt(j);
                             }
                         }
                         for (int j = 0; j < buffer5.length() - 1; j++) {
-                            if (buffer5.charAt(j) == 'Áã' && buffer5.charAt(j + 1) == 'Ç§') {
+                            if (buffer5.charAt(j) == 'é›¶' && buffer5.charAt(j + 1) == 'åƒ') {
                                 buffer5.deleteCharAt(j);
                                 buffer5.deleteCharAt(j);
                             }
                         }
                         for (int j = 0; j < buffer5.length() - 1; j++) {
-                            if (buffer5.charAt(j) == 'Áã' && buffer5.charAt(j + 1) == 'Íò') {
+                            if (buffer5.charAt(j) == 'é›¶' && buffer5.charAt(j + 1) == 'ä¸‡') {
                                 buffer5.deleteCharAt(j);
                             }
                         }
-                        //É¾³ıÄ©Î²¶àÓàµÄÁã
-                        while (buffer5.charAt(buffer5.length() - 1) == 'Áã') {
+                        //åˆ é™¤æœ«å°¾å¤šä½™çš„é›¶
+                        while (buffer5.charAt(buffer5.length() - 1) == 'é›¶') {
                             buffer5.deleteCharAt(buffer5.length() - 1);
                         }
                         result = buffer5.toString();
@@ -345,7 +345,7 @@ public class NumberToChinese {
     public static void main(String[] args) {
         NumberToChinese numberToChinese = new NumberToChinese();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("ÊäÈëÊı×Ö");
+        System.out.println("è¾“å…¥æ•°å­—");
         String str = scanner.nextLine();
         System.out.println(numberToChinese.NuToCh(str));
     }

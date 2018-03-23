@@ -1,8 +1,8 @@
 package Unit6;
 
 /**
- * å‘½ä»¤æ¨¡å¼
- * å®ç°æ–¹æ³•å’Œå¤„ç†åˆ†ç¦»
+ * ÃüÁîÄ£Ê½
+ * ÊµÏÖ·½·¨ºÍ´¦Àí·ÖÀë
  */
 public interface Command {
     void process(int[] target);

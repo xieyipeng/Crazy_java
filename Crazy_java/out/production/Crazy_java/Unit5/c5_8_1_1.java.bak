@@ -1,11 +1,11 @@
 package Unit5;
 
 /**
- * ç»§æ‰¿å’Œç»„åˆ
- * ç»„åˆï¼šå®ç°ç±»å¤ç”¨çš„é‡è¦æ–¹å¼,èƒ½æä¾›æ›´å¥½çš„å°è£…æ€§
+ * ¼Ì³ĞºÍ×éºÏ
+ * ×éºÏ£ºÊµÏÖÀà¸´ÓÃµÄÖØÒª·½Ê½,ÄÜÌá¹©¸üºÃµÄ·â×°ĞÔ
  *
- * finalä¿®é¥°ç±»
- * è®¾ç½®æˆæœ€ç»ˆç±»ï¼Œä¸å¯å½“çˆ¶ç±»
+ * finalĞŞÊÎÀà
+ * ÉèÖÃ³É×îÖÕÀà£¬²»¿Éµ±¸¸Àà
  *
  */
 class bask{
@@ -13,7 +13,7 @@ class bask{
         test();
     }
     public void test() {
-        System.out.println("çˆ¶ç±»ä¸­æ„é€ å‡½æ•°è°ƒç”¨çš„æ–¹æ³•");
+        System.out.println("¸¸ÀàÖĞ¹¹Ôìº¯Êıµ÷ÓÃµÄ·½·¨");
     }
 }
 public class c5_8_1_1 extends bask{
@@ -21,7 +21,7 @@ public class c5_8_1_1 extends bask{
 
     @Override
     public void test() {
-        System.out.println("å­ç±»ä¸­é‡å†™çˆ¶ç±»çš„æ–¹æ³•"+"the length of this name"+name.length());
+        System.out.println("×ÓÀàÖĞÖØĞ´¸¸ÀàµÄ·½·¨"+"the length of this name"+name.length());
     }
 
     public static void main(String[] args) {

@@ -1,8 +1,8 @@
 package Unit5;
 
 /**
- * 鍒濆鍖栧潡
- * java鍏堟墽琛屽垵濮嬪寲鍧楀唴閮ㄧ殑浠ｇ爜
+ * 初始化块
+ * java先执行初始化块内部的代码
  */
 public class c5_9_1_1 {
     int a=9;

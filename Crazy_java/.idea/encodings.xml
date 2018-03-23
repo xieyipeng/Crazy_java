@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" native2AsciiForPropertiesFiles="false" defaultCharsetForPropertiesFiles="UTF-8">
-    <file url="file://$PROJECT_DIR$/src/Unit4/Gobang.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Unit3/c3_4_1_1.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Unit3/c3_5_1_1.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Unit3/c3_7_1_1.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Unit4/Gobang.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/Unit4/NumberToChinese.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Unit4/c4_5_3_1.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Unit4/final_2.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Unit5/c5_8_1_1.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/Unit5/c5_8_2_1.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Unit5/c5_9_1_1.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Unit6/Command.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Unit6/c6_7_2_1.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Unit6/c6_8_1_1.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Unit6/c6_8_2_1.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Unit7/c7_1_2.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Unit7/c7_2_2.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Unit7/c7_3_3.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/Unit7/c7_4_3.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Unit8/c8_8_1.java" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

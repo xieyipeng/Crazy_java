@@ -1,17 +1,17 @@
 # **Java notes**
-## ä»£ç è¡¥å…¨
-### 1ã€ctrl+j
-* foriï¼š
+## ´úÂë²¹È«
+### 1¡¢ctrl+j
+* fori£º
   for(int i = 0;i < ;i++){}
-* foreachï¼š
+* foreach£º
   for(:){}
-* ifnï¼š
+* ifn£º
   if(args == null)
-* soutï¼š
+* sout£º
   ystem.out.println()
-* stï¼š
+* st£º
  ?String
-### 2ã€alt+insert
+### 2¡¢alt+insert
 ![picture](https://static.oschina.net/uploads/space/2017/0706/001108_uclK_2248183.png)
-### 3ã€alt+Enter
+### 3¡¢alt+Enter
 ![picture](https://static.oschina.net/uploads/space/2017/0706/002215_3g7E_2248183.png)

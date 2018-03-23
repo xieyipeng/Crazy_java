@@ -3,64 +3,64 @@ package Unit7;
 import java.time.*;
 
 /**
- * timeÀà
+ * timeç±»
  */
 public class c7_4_3 {
     public static void main(String[] args) {
         Clock clock = Clock.systemUTC();
-        //instant¼´Ê±
-        System.out.println("µ±ÏÖÊ±¿Ì£º" + clock.instant());
-        //»ñÈ¡clock¶ÔÓ¦µÄºÁÃëÊı
-        System.out.println("ºÁÃë£º" + clock.millis());
-        System.out.println("ºÁÃë£º" + System.currentTimeMillis());
+        //instantå³æ—¶
+        System.out.println("å½“ç°æ—¶åˆ»ï¼š" + clock.instant());
+        //è·å–clockå¯¹åº”çš„æ¯«ç§’æ•°
+        System.out.println("æ¯«ç§’ï¼š" + clock.millis());
+        System.out.println("æ¯«ç§’ï¼š" + System.currentTimeMillis());
         //Duration
         Duration duration = Duration.ofSeconds(6000);
-        System.out.println("6000ÃëÏàµ±ÓÚ" + duration.toMinutes() + "·Ö");
-        System.out.println("6000ÃëÏàµ±ÓÚ" + duration.toHours() + "Ğ¡Ê±");
-        System.out.println("6000ÃëÏàµ±ÓÚ" + duration.toDays() + "Ìì");
-        //ÔÚClock»ù´¡ÉÏÔÙ¼Ó6000Ãë£¬·µ»ØĞÂµÄClock
+        System.out.println("6000ç§’ç›¸å½“äº" + duration.toMinutes() + "åˆ†");
+        System.out.println("6000ç§’ç›¸å½“äº" + duration.toHours() + "å°æ—¶");
+        System.out.println("6000ç§’ç›¸å½“äº" + duration.toDays() + "å¤©");
+        //åœ¨ClockåŸºç¡€ä¸Šå†åŠ 6000ç§’ï¼Œè¿”å›æ–°çš„Clock
         Clock clock1 = Clock.offset(clock, duration);
-        System.out.println("µ±Ç°Ê±¿Ì¼Ó6000Ãë=" + clock1.instant());
-        //InstantÓÃ·¨
+        System.out.println("å½“å‰æ—¶åˆ»åŠ 6000ç§’=" + clock1.instant());
+        //Instantç”¨æ³•
         Instant instant = Instant.now();
         System.out.println("instant" + instant);
-        //instantÌí¼Ó6000Ãë£¬·µ»ØĞÂµÄinstant
+        //instantæ·»åŠ 6000ç§’ï¼Œè¿”å›æ–°çš„instant
         Instant instant1 = instant.plusSeconds(6000);
         System.out.println("instant" + instant1);
-        //¸ù¾İ×Ö·û´®½âÎöInstant¶ÔÏó
+        //æ ¹æ®å­—ç¬¦ä¸²è§£æInstantå¯¹è±¡
         Instant instant2 = Instant.parse("2014-02-23T10:12:35.342Z");
         System.out.println(instant2);
-        //ÔÚinstant»ù´¡ÉÏ¼Ó5Ğ¡Ê±4·ÖÖÓ
+        //åœ¨instantåŸºç¡€ä¸ŠåŠ 5å°æ—¶4åˆ†é’Ÿ
         Instant instant3 = instant2.plus(Duration.ofHours(5).plusMinutes(4));
         System.out.println(instant3);
-        //»ñÈ¡instant3µÄ5ÌìÇ°µÄÊ±¿Ì
+        //è·å–instant3çš„5å¤©å‰çš„æ—¶åˆ»
         Instant instant4 = instant3.minus(Duration.ofDays(5));
         System.out.println(instant4);
-        //LocalDataÓÃ·¨
+        //LocalDataç”¨æ³•
         LocalDate localDate = LocalDate.now();
         System.out.println("localData"+localDate);
-        //»ñÈ¡2014ÄêµÄµÚ146Ìì
+        //è·å–2014å¹´çš„ç¬¬146å¤©
         localDate=LocalDate.ofYearDay(2014,146);
         System.out.println(localDate);
-        //ÉèÖÃÎª2014Äê5ÔÂ21ÈÕ
+        //è®¾ç½®ä¸º2014å¹´5æœˆ21æ—¥
         localDate=LocalDate.of(2014, Month.MAY,21);
         System.out.println(localDate);
-        //LocalTimeÓÃ·¨
+        //LocalTimeç”¨æ³•
         LocalTime localTime=LocalTime.now();
-        //ÉèÖÃÎª22µã33·Ö
+        //è®¾ç½®ä¸º22ç‚¹33åˆ†
         localTime=LocalTime.of(22,33);
         System.out.println(localTime);
-        //·µ»ØÒ»ÌìÖĞµÄ5503Ãë
+        //è¿”å›ä¸€å¤©ä¸­çš„5503ç§’
         localTime=LocalTime.ofSecondOfDay(5503);
         System.out.println(localTime);
-        //localDateTimeÓÃ·¨
+        //localDateTimeç”¨æ³•
         LocalDateTime localDateTime=LocalDateTime.now();
-        //µ±Ç°Ê±¼ä¼ÓÉÏ25Ğ¡Ê±3·ÖÖÓ
+        //å½“å‰æ—¶é—´åŠ ä¸Š25å°æ—¶3åˆ†é’Ÿ
         LocalDateTime future=localDateTime.plusHours(25).plusMinutes(3);
-        System.out.println("µ±Ç°Ê±¼ä¼ÓÉÏ25Ğ¡Ê±3·ÖÖÓÊÇ="+future);
+        System.out.println("å½“å‰æ—¶é—´åŠ ä¸Š25å°æ—¶3åˆ†é’Ÿæ˜¯="+future);
         //Year,YearMonth,MonthDay
         Year year=Year.now();
-        System.out.println("µ±Ç°Äê·İ£º"+year);
+        System.out.println("å½“å‰å¹´ä»½ï¼š"+year);
         year=year.plusYears(5);
         System.out.println(year);
         //...

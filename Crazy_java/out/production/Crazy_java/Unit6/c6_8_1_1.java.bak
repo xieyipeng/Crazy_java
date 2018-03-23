@@ -13,7 +13,7 @@ interface Addable {
 }
 
 /**
- * lambda è¡¨è¾¾å¼
+ * lambda ±í´ïÊ½
  */
 public class c6_8_1_1 {
     public void eat(Eatable eatable) {
@@ -21,19 +21,19 @@ public class c6_8_1_1 {
         eatable.taste();
     }
     public void drive(Flyable flyable) {
-        System.out.println("æˆ‘æ­£åœ¨é©¾é©¶ï¼š" + flyable);
-        flyable.fly("ã€ç¢§ç©ºå¦‚æ´—çš„æ™´æ—¥ã€‘");
+        System.out.println("ÎÒÕıÔÚ¼İÊ»£º" + flyable);
+        flyable.fly("¡¾±Ì¿ÕÈçÏ´µÄÇçÈÕ¡¿");
     }
     public void test(Addable addable) {
-        System.out.println("5å’Œ3çš„å’Œï¼š " + addable.add(5, 3));
+        System.out.println("5ºÍ3µÄºÍ£º " + addable.add(5, 3));
     }
 
     public static void main(String[] args) {
         c6_8_1_1 c = new c6_8_1_1();
-//        c.eat(() -> System.out.println("è‹¹æœå‘³é“ä¸é”™"));
+//        c.eat(() -> System.out.println("Æ»¹ûÎ¶µÀ²»´í"));
 //        c.drive(weather -> {
-//            System.out.println("ä»Šå¤©å¤©æ°”ï¼š" + weather);
-//            System.out.println("ç›´å‡æœºé£è¡Œå¹³ç¨³");
+//            System.out.println("½ñÌìÌìÆø£º" + weather);
+//            System.out.println("Ö±Éı»ú·ÉĞĞÆ½ÎÈ");
 //        });
 //        c.test((a, b) -> a + b);
 
@@ -42,14 +42,14 @@ public class c6_8_1_1 {
         c.eat(new Eatable() {
             @Override
             public void taste() {
-                System.out.println("è‹¹æœå‘³é“ä¸é”™");
+                System.out.println("Æ»¹ûÎ¶µÀ²»´í");
             }
         });
         c.drive(new Flyable() {
             @Override
             public void fly(String weather) {
-                System.out.println("ä»Šå¤©å¤©æ°”æ˜¯"+weather);
-                System.out.println("ç›´å‡æœºé£è¡Œå¹³ç¨³");
+                System.out.println("½ñÌìÌìÆøÊÇ"+weather);
+                System.out.println("Ö±Éı»ú·ÉĞĞÆ½ÎÈ");
             }
         });
         c.test(new Addable() {

@@ -4,25 +4,25 @@ import java.io.File;
 import java.util.Scanner;
 
 /**
- * Ê¹ÓÃ Scanner »ñÈ¡¼üÅÌÊäÈë
- * Scanner ÊÇ»ùÓÚÕıÔò±í´ïÊ½µÄÎÄ±¾É¨ÃèÆ÷
- * Scanner µÄÁ½¸öÖ÷Òª·½·¨
- *      1¡¢hasNextXxx();  ÅĞ¶ÏÊÇ·ñ»¹ÓĞÏÂÒ»Ïî
- *      2¡¢nextXxx();     »ñÈ¡ÏÂÒ»¸öÊäÈëÏî
+ * ä½¿ç”¨ Scanner è·å–é”®ç›˜è¾“å…¥
+ * Scanner æ˜¯åŸºäºæ­£åˆ™è¡¨è¾¾å¼çš„æ–‡æœ¬æ‰«æå™¨
+ * Scanner çš„ä¸¤ä¸ªä¸»è¦æ–¹æ³•
+ *      1ã€hasNextXxx();  åˆ¤æ–­æ˜¯å¦è¿˜æœ‰ä¸‹ä¸€é¡¹
+ *      2ã€nextXxx();     è·å–ä¸‹ä¸€ä¸ªè¾“å…¥é¡¹
  *
- * throws Exception ±íÃ÷Ö÷³ÌĞò²»×öÈÎºÎÒì³£´¦Àí
+ * throws Exception è¡¨æ˜ä¸»ç¨‹åºä¸åšä»»ä½•å¼‚å¸¸å¤„ç†
  */
 public class c7_1_2 {
     public static void main(String[] args) throws Exception{
 //        Scanner scanner=new Scanner(System.in);
 //        while (scanner.hasNext()){
-//            System.out.println("ÄÚÈİ£º"+scanner.next());
+//            System.out.println("å†…å®¹ï¼š"+scanner.next());
 //        }
-        //¶ÁÈ¡ÎÄ¼ş
+        //è¯»å–æ–‡ä»¶
         Scanner scanner=new Scanner(new File("F:\\VS-community\\View.txt"));
-        System.out.println("ÄÚÈİÈçÏÂ£º");
+        System.out.println("å†…å®¹å¦‚ä¸‹ï¼š");
         while (scanner.hasNextLine()){
-            //°´ĞĞ¶ÁÈ¡
+            //æŒ‰è¡Œè¯»å–
             System.out.println(scanner.nextLine());
         }
     }

@@ -1,11 +1,11 @@
 package Unit3;
-//鑷姩绫诲瀷杞崲
+//自动类型转换
 public class c3_5_1_1 {
 	public static void main(String[] args) {
 		int a=6;
 		double d=a;
 		System.out.println(d);//6.0
-		String str=3.5f+" 123";//涓庡瓧绗︿覆閾炬帴鑷姩杞寲涓哄瓧绗︿覆
+		String str=3.5f+" 123";//与字符串链接自动转化为字符串
 		System.out.println(str);
 	}
 }

@@ -5,22 +5,22 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * æ¢­å“ˆæ¸¸æˆ
+ * Ëó¹şÓÎÏ·
  */
 public class c8_8_1 {
-    //å®šä¹‰æœ€å¤šæ”¯æŒå¤šå°‘ä¸ªç©å®¶ç©
+    //¶¨Òå×î¶àÖ§³Ö¶àÉÙ¸öÍæ¼ÒÍæ
     private final int PLAY_NUM=5;
-    private String[] types={"æ–¹å—","è‰èŠ±","çº¢å¿ƒ","é»‘æ¡ƒ"};
+    private String[] types={"·½¿é","²İ»¨","ºìĞÄ","ºÚÌÒ"};
     private String[] values={"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
-    //cardsæ˜¯ä¸€å±€æ¸¸æˆä¸­å‰©ä¸‹çš„æ‰‘å…‹ç‰Œ
+    //cardsÊÇÒ»¾ÖÓÎÏ·ÖĞÊ£ÏÂµÄÆË¿ËÅÆ
     private List<String> cards=new LinkedList<>();
-    //å®šä¹‰æ‰€æœ‰ç©å®¶
+    //¶¨ÒåËùÓĞÍæ¼Ò
     private String[] players =new String[PLAY_NUM];
-    //æ‰€æœ‰ç©å®¶æ‰‹ä¸Šçš„æ‰‘å…‹ç‰Œ
+    //ËùÓĞÍæ¼ÒÊÖÉÏµÄÆË¿ËÅÆ
     private List<String>[] playersCards=new List[PLAY_NUM];
     /**
-     * åˆå§‹åŒ–æ‰‘å…‹ç‰Œï¼Œæ”¾å…¥52ç« æ‰‘å…‹ç‰Œ
-     * å¹¶ä½¿ç”¨shuffleæ–¹æ³•æ˜¯ä»–ä»¬éšæœºæ’åˆ—
+     * ³õÊ¼»¯ÆË¿ËÅÆ£¬·ÅÈë52ÕÂÆË¿ËÅÆ
+     * ²¢Ê¹ÓÃshuffle·½·¨ÊÇËûÃÇËæ»úÅÅÁĞ
      */
     public void initCards(){
         for (int i = 0; i < types.length; i++) {
@@ -28,26 +28,26 @@ public class c8_8_1 {
                 cards.add(types[i]+values[j]);
             }
         }
-        //éšæœºæ’åˆ—
+        //Ëæ»úÅÅÁĞ
         Collections.shuffle(cards);
     }
     /**
-     * åˆå§‹åŒ–ç©å®¶ï¼Œå¹¶ç»™æ¯ä¸ªç©å®¶åˆ†æ´¾ç”¨æˆ·å
+     * ³õÊ¼»¯Íæ¼Ò£¬²¢¸øÃ¿¸öÍæ¼Ò·ÖÅÉÓÃ»§Ãû
      */
     public void initPlayer(String ...names){
         if (names.length>PLAY_NUM||names.length<2){
-            //æ•ˆéªŒç©å®¶æ•°é‡
-            System.out.println("ç©å®¶æ•°é‡å‡ºé”™");
+            //Ğ§ÑéÍæ¼ÒÊıÁ¿
+            System.out.println("Íæ¼ÒÊıÁ¿³ö´í");
             return;
         }else {
-            //åˆå§‹åŒ–ç”¨æˆ·å
+            //³õÊ¼»¯ÓÃ»§Ãû
             for (int i = 0; i < names.length; i++) {
                 players[i]=names[i];
             }
         }
     }
     /**
-     * åˆå§‹åŒ–ç©å®¶æ‰‹ä¸­çš„æ‰‘å…‹ç‰Œï¼Œå¼€å§‹æ—¶ç©å®¶æ‰‹ä¸­ç‰Œä¸ºç©º
+     * ³õÊ¼»¯Íæ¼ÒÊÖÖĞµÄÆË¿ËÅÆ£¬¿ªÊ¼Ê±Íæ¼ÒÊÖÖĞÅÆÎª¿Õ
      */
     public void initPlayerCards(){
         for (int i = 0; i < players.length; i++) {
@@ -57,7 +57,7 @@ public class c8_8_1 {
         }
     }
     /**
-     * è¾“å‡ºå…¨éƒ¨æ‰‘å…‹ç‰Œï¼Œä»…ä½œæµ‹è¯•ä½¿ç”¨
+     * Êä³öÈ«²¿ÆË¿ËÅÆ£¬½ö×÷²âÊÔÊ¹ÓÃ
      */
     public void showAllCard(){
         for (String card:cards){
@@ -66,21 +66,21 @@ public class c8_8_1 {
     }
 
     /**
-     * æ´¾æ‰‘å…‹ç‰Œ
-     * @param first æœ€å…ˆæ´¾ç»™è°
+     * ÅÉÆË¿ËÅÆ
+     * @param first ×îÏÈÅÉ¸øË­
      */
     public void deliverCard(String first){
-        //è°ƒç”¨ArrayUtilså·¥å…·ç±»çš„searchæ–¹æ³•
-        //æŸ¥è¯¢æŒ‡å®šå…ƒç´ åœ¨æ•°ç»„ä¸­çš„ç´¢å¼•
+        //µ÷ÓÃArrayUtils¹¤¾ßÀàµÄsearch·½·¨
+        //²éÑ¯Ö¸¶¨ÔªËØÔÚÊı×éÖĞµÄË÷Òı
         int firstPos=ArrayUtils.search(players,first);
-        //ä¾æ¬¡ç»™ä½äºæŒ‡å®šç©å®¶ä¹‹åçš„æ¯ä¸ªç©å®¶æ´¾æ‰‘å…‹ç‰Œ
+        //ÒÀ´Î¸øÎ»ÓÚÖ¸¶¨Íæ¼ÒÖ®ºóµÄÃ¿¸öÍæ¼ÒÅÉÆË¿ËÅÆ
         for (int i = firstPos; i < PLAY_NUM; i++) {
             if (players[i]!=null){
                 playersCards[i].add(cards.get(0));
                 cards.remove(0);
             }
         }
-        //ä¾æ¬¡ç»™ä½äºè¯¥æŒ‡å®šç©å®¶å‰é¢çš„æ¯ä¸ªç©å®¶æ´¾æ‰‘å…‹ç‰Œ
+        //ÒÀ´Î¸øÎ»ÓÚ¸ÃÖ¸¶¨Íæ¼ÒÇ°ÃæµÄÃ¿¸öÍæ¼ÒÅÉÆË¿ËÅÆ
         for (int i = 0; i < firstPos; i++) {
             if (players[i]!=null){
                 playersCards[i].add(cards.get(0));
@@ -89,12 +89,12 @@ public class c8_8_1 {
         }
     }
     /**
-     * è¾“å‡ºç©å®¶æ‰‹ä¸Šçš„æ’
+     * Êä³öÍæ¼ÒÊÖÉÏµÄÅÅ
      */
     public void showPlayerCard(){
         for (int i = 0; i < PLAY_NUM; i++) {
             if (players[i]!=null){
-                //è¾“å‡ºç©å®¶
+                //Êä³öÍæ¼Ò
                 System.out.println(players[i]+":  ");
                 for (String card:playersCards[i]){
                     System.out.print(card+"\t");
@@ -106,22 +106,22 @@ public class c8_8_1 {
 
     public static void main(String[] args){
         c8_8_1 c=new c8_8_1();
-        c.initPlayer("ç”µè„‘ç©å®¶","å­™æ‚Ÿç©º");
+        c.initPlayer("µçÄÔÍæ¼Ò","ËïÎò¿Õ");
         c.initCards();
         c.initPlayerCards();
         System.out.println("--------");
-        //ä¸‹é¢ä»å­™æ‚Ÿç©ºå¼€å§‹æ´¾ç‰Œ
-        c.deliverCard("å­™æ‚Ÿç©º");
+        //ÏÂÃæ´ÓËïÎò¿Õ¿ªÊ¼ÅÉÅÆ
+        c.deliverCard("ËïÎò¿Õ");
         c.showPlayerCard();
         /**
-         * è¿™ä¸ªåœ°æ–¹éœ€è¦å¢åŠ å¤„ç†
-         * 1ã€ç‰Œé¢æœ€å¤§çš„ç©å®¶ä¸‹æ³¨
-         * 2ã€å…¶ä»–ç©å®¶æ˜¯å¦è·Ÿæ³¨
-         * 3ã€æ¸¸æˆæ˜¯å¦åªå‰©ä¸€ä¸ªç©å®¶ï¼Œè‹¥æ˜¯ï¼Œåˆ™å¥¹èƒœåˆ©
-         * 4ã€å¦‚æœå·²ç»æ˜¯æœ€åä¸€å¼ ç‰Œï¼Œåˆ™æ¯”è¾ƒå‰©ä¸‹ç©å®¶çš„ç‰Œé¢å¤§å°
+         * Õâ¸öµØ·½ĞèÒªÔö¼Ó´¦Àí
+         * 1¡¢ÅÆÃæ×î´óµÄÍæ¼ÒÏÂ×¢
+         * 2¡¢ÆäËûÍæ¼ÒÊÇ·ñ¸ú×¢
+         * 3¡¢ÓÎÏ·ÊÇ·ñÖ»Ê£Ò»¸öÍæ¼Ò£¬ÈôÊÇ£¬ÔòËıÊ¤Àû
+         * 4¡¢Èç¹ûÒÑ¾­ÊÇ×îºóÒ»ÕÅÅÆ£¬Ôò±È½ÏÊ£ÏÂÍæ¼ÒµÄÅÆÃæ´óĞ¡
          */
-        //å†æ¬¡ä»â€œç”µè„‘ç©å®¶â€å¼€å§‹æ´¾ç‰Œ
-        c.deliverCard("ç”µè„‘ç©å®¶");
+        //ÔÙ´Î´Ó¡°µçÄÔÍæ¼Ò¡±¿ªÊ¼ÅÉÅÆ
+        c.deliverCard("µçÄÔÍæ¼Ò");
         c.showPlayerCard();
     }
 }

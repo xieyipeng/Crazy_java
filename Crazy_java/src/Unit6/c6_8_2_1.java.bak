@@ -1,7 +1,7 @@
 package Unit6;
 
 /**
- * lambdaè¡¨è¾¾å¼ä¸¾ä¾‹
+ * lambda±í´ïÊ½¾ÙÀı
  */
 public class c6_8_2_1 {
     public static void main(String[] args) {
@@ -12,14 +12,14 @@ public class c6_8_2_1 {
             for (int temp: target1){
                 sum=sum+temp;
             }
-            System.out.println("æ•°ç»„å’Œä¸º: "+sum);
+            System.out.println("Êı×éºÍÎª: "+sum);
         });
         Runnable runnable= () -> {
             int sum=0;
             for (int i = 0; i < 100; i++) {
                 sum=sum+i;
             }
-            System.out.println("ä»0åŠ åˆ°99 = "+sum);
+            System.out.println("´Ó0¼Óµ½99 = "+sum);
         };
         runnable.run();
     }
