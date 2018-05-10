@@ -1,10 +1,10 @@
 package test5;
 
-public class Java_Teacher extends Teacher{
+public class DBTeacher extends Teacher {
     String name;
     String introduce;
 
-    public Java_Teacher(String name, String introduce) {
+    public DBTeacher(String name, String introduce) {
         this.name = name;
         this.introduce = introduce;
     }
@@ -16,6 +16,6 @@ public class Java_Teacher extends Teacher{
 
     @Override
     public void lesson() {
-        System.out.println("上java课");
+        System.out.println("上数据库课");
     }
 }
